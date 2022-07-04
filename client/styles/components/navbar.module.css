@@ -1,0 +1,115 @@
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 5px;
+  height: 70px;
+  width: 100%;
+  border-bottom: 1px solid #e7e7e7;
+  z-index: 99;
+  position: -webkit-sticky;
+  position: sticky;
+}
+
+.left__section {
+  color: #717174;
+  height: 40px;
+  display: flex;
+}
+
+.logo {
+  margin-right: 12px;
+  color: #163bcd;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  height: 100%;
+  cursor: pointer;
+}
+
+.left__section__item {
+  height: 100%;
+  padding: 0 12px;
+  color: rgba(18, 18, 23, 0.6);
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.left__section__item__svg {
+  width: 24px;
+  height: 24px;
+}
+
+.left__section__item__text {
+  font-size: 16px;
+  font-weight: 600;
+  margin-left: 8px;
+}
+
+.right__section {
+  height: 40px;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+}
+
+.search__button {
+  width: 224px;
+  height: 100%;
+  border: 1px solid #d7d8e0;
+  border-radius: 100px;
+  box-sizing: border-box;
+  padding: 10px 16px;
+  display: flex;
+  align-items: center;
+  color: rgba(18, 18, 23, 0.24);
+  margin-right: 12px;
+  transition: 0.2s;
+  transition-property: all;
+  transition-duration: 0.2s;
+  transition-timing-function: ease;
+  transition-delay: 0s;
+  cursor: pointer;
+}
+
+.search__button:hover {
+  background-color: rgba(208, 222, 255, 0.3);
+  color: #3b66f5;
+}
+
+.search__button__text {
+  margin-left: 8px;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.right__section__item {
+  height: 100%;
+  line-height: 40px;
+  padding: 0 12px;
+  color: rgba(18, 18, 23, 0.6);
+  cursor: pointer;
+}
+
+.sign__in__button {
+  color: #fff;
+  border: 1px solid transparent;
+  background-color: #3b66f5;
+  background-image: linear-gradient(90deg, #3b66f5, #163bcd);
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  height: 100%;
+  padding: 0 1em;
+  transition: 0.3s;
+  font-size: 14px;
+  font-family: Nunito Sans, SF Pro Text, SF Pro Icons, Roboto, Helvetica Neue,
+    Helvetica, Arial, sans-serif;
+  font-weight: 600;
+  box-sizing: border-box;
+  border-radius: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
