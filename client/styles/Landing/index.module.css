@@ -1,0 +1,215 @@
+.container {
+  width: 100%;
+  font-family: sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.top__book {
+  width: 95%;
+  display: flex;
+  flex-direction: column;
+  margin-top: 70px;
+  margin-bottom: 70px;
+}
+
+.top__book__title {
+  font-size: 28px;
+  font-weight: 600;
+  margin-bottom: 30px;
+}
+
+.top__book__box {
+  display: flex;
+}
+
+.top__book__details__container {
+  background-color: #a48dff;
+  padding: 20px;
+  display: flex;
+}
+
+.top__book__details {
+  display: flex;
+}
+
+.top__book__cover {
+  height: 250px;
+  width: 200px;
+  position: relative;
+  border-radius: 4px;
+  margin-right: 20px;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+}
+
+.status {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  height: 2em;
+  width: fit-content;
+  padding: 0 10px;
+  background-color: blueviolet;
+  color: white;
+  margin-bottom: 10px;
+  border-radius: 5px;
+}
+
+.title {
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 15px;
+  color: white;
+}
+
+.details {
+  color: white;
+  width: 240px;
+}
+
+.top__book__info {
+  margin-left: 20px;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.top__book__info__box {
+  flex-grow: 1;
+  border-bottom: 1px solid grey;
+  font-size: 28px;
+  display: flex;
+  align-items: center;
+  padding-left: 30px;
+}
+
+.top__books {
+  width: 95%;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 120px;
+}
+
+.top__books__title {
+  margin: 0%;
+  font-size: 34px;
+  font-weight: 700;
+
+  margin-bottom: 8px;
+}
+
+.top__books__subtitle {
+  margin: 0%;
+  font-size: 22px;
+  font-weight: 700;
+  color: grey;
+  margin-bottom: 25px;
+}
+
+.top__books__list {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.top__books__item {
+  width: 23%;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #a48dff;
+}
+
+.top__books__item__cover {
+  width: 50%;
+  height: 190px;
+  position: relative;
+  border-radius: 4px;
+  margin-bottom: 20px;
+  margin-top: 40px;
+}
+
+.top__books__item__title {
+  margin: 0%;
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 10px;
+  width: 70%;
+  text-align: center;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.top__books__item__status {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  height: 2em;
+  width: fit-content;
+  padding: 0 10px;
+  background-color: blueviolet;
+  color: white;
+  margin-bottom: 30px;
+  border-radius: 5px;
+}
+
+.recent__updates__container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  background-color: #d9d0f9;
+}
+
+.recent__updates {
+  width: 95%;
+  margin-bottom: 120px;
+}
+
+.recent__updates__title {
+  margin: 0%;
+  font-size: 46px;
+  font-weight: 700;
+  color: white;
+  margin-top: 40px;
+  margin-bottom: 30px;
+}
+
+.recent__updates__item {
+  width: 100%;
+  border-bottom: 1px solid grey;
+  font-size: 22px;
+  font-weight: 600;
+  color: white;
+  height: 2.5em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-right: 20px;
+}
+.recent__updates__item__created {
+  font-size: 16px;
+  color: grey;
+}
+
+.recent__updates__item__book {
+  width: 30%;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.recent__updates__item__author {
+  width: 20%;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}

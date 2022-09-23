@@ -3,9 +3,9 @@
   align-items: center;
   justify-content: space-between;
   padding: 20px 5px;
-  height: 70px;
-  width: 100%;
-  border-bottom: 1px solid #e7e7e7;
+  height: 80px;
+  width: 96%;
+  border-bottom: 1px solid #d0c4ff;
   z-index: 99;
   position: -webkit-sticky;
   position: sticky;
@@ -13,18 +13,18 @@
 
 .left__section {
   color: #717174;
-  height: 40px;
+  height: 100%;
   display: flex;
+  align-items: center;
+  align-items: center;
 }
 
 .logo {
   margin-right: 12px;
-  color: #163bcd;
-  font-weight: 700;
-  display: flex;
-  align-items: center;
   height: 100%;
+  width: 150px;
   cursor: pointer;
+  position: relative;
 }
 
 .left__section__item {
@@ -73,15 +73,25 @@
   cursor: pointer;
 }
 
-.search__button:hover {
-  background-color: rgba(208, 222, 255, 0.3);
-  color: #3b66f5;
-}
-
-.search__button__text {
+.search__input {
   margin-left: 8px;
   font-size: 16px;
   font-weight: 400;
+  width: calc(100% - 34px);
+  height: 100%;
+  background-color: transparent;
+  border: none;
+  color: rgba(22, 21, 28, 0.54);
+}
+
+.search__input::placeholder {
+  font-size: 16px;
+  font-weight: 400;
+  color: rgba(22, 21, 28, 0.54);
+}
+
+.search__input:focus {
+  outline: none;
 }
 
 .right__section__item {
@@ -92,11 +102,14 @@
   cursor: pointer;
 }
 
+.button__container {
+  height: 100%;
+}
+
 .sign__in__button {
   color: #fff;
   border: 1px solid transparent;
-  background-color: #3b66f5;
-  background-image: linear-gradient(90deg, #3b66f5, #163bcd);
+  background-color: #6d4aff;
   background-position: 50% 50%;
   background-repeat: no-repeat;
   height: 100%;

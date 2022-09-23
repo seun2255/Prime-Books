@@ -1,0 +1,26 @@
+.container {
+  width: 100%;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.balance {
+  font-size: 20px;
+  font-weight: 600;
+  align-self: flex-end;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  margin-right: 5%;
+}
+
+.books__container {
+  width: 90%;
+  min-height: 400px;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 50px;
+}

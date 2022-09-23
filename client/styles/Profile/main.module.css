@@ -1,0 +1,136 @@
+.container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: sans-serif;
+}
+
+.inner__container {
+  width: 60%;
+  height: 90%;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.fields {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.username__field {
+  flex-grow: 1;
+}
+
+.label {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.username__input {
+  width: 100%;
+  font-size: 20px;
+  height: 2em;
+  padding-left: 15px;
+  border-radius: 5px;
+  border: 1px solid black;
+  margin-bottom: 56px;
+}
+
+.about__input {
+  width: 100%;
+  font-size: 18px;
+  height: 10em;
+  padding-left: 15px;
+  padding-top: 10px;
+  border-radius: 5px;
+  border: 1px solid black;
+  resize: none;
+}
+
+.username__input:focus {
+  border-color: blueviolet;
+  outline: blueviolet solid 2px;
+}
+
+.about__input:focus {
+  border-color: blueviolet;
+  outline: blueviolet solid 2px;
+}
+
+.photo__field {
+  width: 250px;
+  margin-left: 40px;
+}
+
+.profile__pic {
+  width: 100%;
+  height: 250px;
+  position: relative;
+  border-radius: 20px;
+  border: 1px solid black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.no__pic {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.upload__button {
+  width: 100%;
+  font-size: 18px;
+  font-weight: 600;
+  height: 2em;
+  border: 1px solid black;
+  border-radius: 5px;
+  margin-top: 20px;
+  background-color: white;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.button__container {
+  width: 100%;
+  margin-top: 20px;
+  border-top: 1px solid grey;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.button {
+  margin-top: 20px;
+  font-size: 18px;
+  height: 2em;
+  padding: 0 10px;
+  font-weight: 600;
+  color: white;
+  background-color: blueviolet;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+}
+
+.loader {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  z-index: 10;
+  top: 0;
+  left: 0;
+}
