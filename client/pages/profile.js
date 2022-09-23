@@ -61,7 +61,7 @@ export default function Profile() {
         {selected === 2 && (
           <MyBooks books={state.user.myBooks} setView={setSelected} />
         )}
-        {selected === 3 && <Finance user={state.user} setView={setSelected} />}
+        {/* {selected === 3 && <Finance user={state.user} setView={setSelected} />} */}
         {selected === 4 && <NewBook user={state.user} setView={setSelected} />}
       </div>
     </div>
