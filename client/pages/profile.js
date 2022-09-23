@@ -7,7 +7,7 @@ import Main from "../components/Profile/main";
 import MyBooks from "../components/Profile/myBooks";
 import Library from "../components/Profile/library";
 import NewBook from "../components/Profile/newBook";
-import Finance from "../components/Profile/finance";
+
 import icons from "../assets/icons/icons";
 
 export default function Profile() {
@@ -61,7 +61,7 @@ export default function Profile() {
         {selected === 2 && (
           <MyBooks books={state.user.myBooks} setView={setSelected} />
         )}
-        {selected === 3 && <Finance user={state.user} setView={setSelected} />}
+        {/* {selected === 3 && <Finance user={state.user} setView={setSelected} />} */}
         {selected === 4 && <NewBook user={state.user} setView={setSelected} />}
       </div>
     </div>
