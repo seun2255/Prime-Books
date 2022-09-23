@@ -10,7 +10,7 @@ import Add from "@mui/icons-material/AddSharp";
 import { getBookDetails } from "../api/database";
 
 function MyWork({ book }) {
-  const [selected, setSelected] = useState(2);
+  const [selected, setSelected] = useState(1);
 
   return (
     <div className={styles.container}>

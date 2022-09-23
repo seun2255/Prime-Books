@@ -56,7 +56,7 @@ export default function Profile() {
       <div className={styles.view}>
         {selected === 0 && <Main user={state.user} />}
         {selected === 1 && (
-          <Library books={state.user.myBooks} setView={setSelected} />
+          <Library books={state.user.library} setView={setSelected} />
         )}
         {selected === 2 && (
           <MyBooks books={state.user.myBooks} setView={setSelected} />

@@ -168,6 +168,7 @@ export async function getServerSideProps(context) {
   //   }
   const bookDetails = await getBookDetails(id);
   const latestChapter = bookDetails.chapters[bookDetails.chapters.length - 1];
+  console.log(latestChapter);
 
   return {
     props: { book: bookDetails, latestChapter: latestChapter },

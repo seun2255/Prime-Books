@@ -4,60 +4,7 @@ import styles from "../styles/Landing/index.module.css";
 import Footer from "../components/Home/footer";
 import { getRecent, getAllBooks } from "./api/database";
 
-export default function Home({ books }) {
-  const recentChapters = [
-    {
-      bookId: 1,
-      chapter: 2,
-      created: "20/09/2022",
-    },
-    {
-      bookId: 1,
-      chapter: 4,
-      created: "20/09/2022",
-    },
-    {
-      bookId: 1,
-      chapter: 6,
-      created: "20/09/2022",
-    },
-    {
-      bookId: 2,
-      chapter: 3,
-      created: "20/09/2022",
-    },
-    {
-      bookId: 3,
-      chapter: 4,
-      created: "20/09/2022",
-    },
-    {
-      bookId: 4,
-      chapter: 2,
-      created: "20/09/2022",
-    },
-    {
-      bookId: 3,
-      chapter: 1,
-      created: "20/09/2022",
-    },
-    {
-      bookId: 1,
-      chapter: 2,
-      created: "20/09/2022",
-    },
-    {
-      bookId: 2,
-      chapter: 5,
-      created: "20/09/2022",
-    },
-    {
-      bookId: 4,
-      chapter: 7,
-      created: "20/09/2022",
-    },
-  ];
-
+export default function Home({ books, recentChapters }) {
   return (
     <div className={styles.container}>
       <div className={styles.top__book}>

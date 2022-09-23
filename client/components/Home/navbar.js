@@ -92,22 +92,25 @@ const NavBar = () => {
   useEffect(() => {
     setIsConnected(connectedState);
     connectedState ? setButtonText("profile") : setButtonText("connect");
-    getContract2().then((contract) => {
-      contract.on("TokensBought", async () => {
-        console.log("Tokens were Bought");
-        const balances = await getBalances();
-        var temp = state;
-        temp.tokenBalance = balances.tokenBalance;
-        temp.ethBalance = balances.ethBalance;
-        dispatch({
-          type: "LOGGED_IN_USER",
-          payload: temp,
+    if (isConnected) {
+      getContract2().then((contract) => {
+        contract.on("TokensBought", async () => {
+          console.log("Tokens were Bought");
+          const balances = await getBalances();
+          var temp = state;
+          temp.tokenBalance = balances.tokenBalance;
+          temp.ethBalance = balances.ethBalance;
+          dispatch({
+            type: "LOGGED_IN_USER",
+            payload: temp,
+          });
         });
       });
-    });
+    }
   }, [connectedState]);
 
   useEffect(() => {
+    console.log(isConnected);
     if (isConnected) {
       connect().then((userData) => {
         if (userData) {

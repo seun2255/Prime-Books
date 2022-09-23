@@ -3,10 +3,11 @@ import Image from "next/image";
 import styles from "../../styles/Profile/library.module.css";
 import icons from "../../assets/icons/icons";
 import { useState } from "react";
-import BookGrid from "./booksGrid";
+import BookGrid from "./libraryGrid";
 
 export default function Library(props) {
   const { setView, books } = props;
+  console.log(books);
   return (
     <div className={styles.container}>
       <div className={styles.button__container}>

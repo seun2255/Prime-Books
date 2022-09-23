@@ -143,7 +143,7 @@ const addToRecent = async (chapter) => {
     data["recent"].pop();
   }
 
-  await setDoc(doc(db, "recent", "recent"), { data: data });
+  await setDoc(doc(db, "recent", "recent"), { data: data["recent"] });
 };
 
 const getRecent = async () => {
