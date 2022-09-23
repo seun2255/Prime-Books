@@ -7,7 +7,7 @@ import Main from "../components/Profile/main";
 import MyBooks from "../components/Profile/myBooks";
 import Library from "../components/Profile/library";
 import NewBook from "../components/Profile/newBook";
-import Finance from "../components/Profile/finance";
+
 import icons from "../assets/icons/icons";
 
 export default function Profile() {
