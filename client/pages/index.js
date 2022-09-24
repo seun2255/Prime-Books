@@ -1,5 +1,6 @@
 import Head from "next/head";
 import Image from "next/image";
+import Link from "next/link";
 import styles from "../styles/Landing/index.module.css";
 import Footer from "../components/Home/footer";
 import { getRecent, getAllBooks } from "./api/database";
@@ -12,21 +13,23 @@ export default function Home({ books, recentChapters }) {
         <div className={styles.top__book__box}>
           <div className={styles.top__book__details__container}>
             <div className={styles.top__book__details}>
-              <div className={styles.top__book__cover}>
-                {books[1].cover !== "" ? (
-                  <img
-                    src={books[1].cover}
-                    alt="profile pic"
-                    style={{
-                      width: "100%",
-                      height: "100%",
-                      borderRadius: "5px",
-                    }}
-                  />
-                ) : (
-                  <Image src={icons.bookCover} layout="fill" />
-                )}
-              </div>
+              <Link href={`/books/${books[1].bookId}`}>
+                <div className={styles.top__book__cover}>
+                  {books[1].cover !== "" ? (
+                    <img
+                      src={books[1].cover}
+                      alt="profile pic"
+                      style={{
+                        width: "100%",
+                        height: "100%",
+                        borderRadius: "5px",
+                      }}
+                    />
+                  ) : (
+                    <Image src={icons.bookCover} layout="fill" />
+                  )}
+                </div>
+              </Link>
               <div className={styles.info}>
                 <div className={styles.details}>
                   <div className={styles.status}>{books[1].status}</div>
@@ -67,21 +70,23 @@ export default function Home({ books, recentChapters }) {
                   }}
                   key={index}
                 >
-                  <div className={styles.top__books__item__cover}>
-                    {book.cover !== "" ? (
-                      <img
-                        src={book.cover}
-                        alt="profile pic"
-                        style={{
-                          width: "100%",
-                          height: "100%",
-                          borderRadius: "5px",
-                        }}
-                      />
-                    ) : (
-                      <Image src={icons.bookCover} layout="fill" />
-                    )}
-                  </div>
+                  <Link href={`/books/${book.bookId}`}>
+                    <div className={styles.top__books__item__cover}>
+                      {book.cover !== "" ? (
+                        <img
+                          src={book.cover}
+                          alt="profile pic"
+                          style={{
+                            width: "100%",
+                            height: "100%",
+                            borderRadius: "5px",
+                          }}
+                        />
+                      ) : (
+                        <Image src={icons.bookCover} layout="fill" />
+                      )}
+                    </div>
+                  </Link>
                   <h4 className={styles.top__books__item__title}>
                     {book.title}
                   </h4>
@@ -101,18 +106,20 @@ export default function Home({ books, recentChapters }) {
           </h3>
           {recentChapters.map((chapter, index) => {
             return (
-              <div className={styles.recent__updates__item} key={index}>
-                <span className={styles.recent__updates__item__book}>
-                  {books[chapter.bookId].title}
-                </span>
-                <span>Chapter {chapter.chapter}</span>
-                <span className={styles.recent__updates__item__author}>
-                  {books[chapter.bookId].author}
-                </span>
-                <span className={styles.recent__updates__item__created}>
-                  {chapter.created}
-                </span>
-              </div>
+              <Link href={`/books/${chapter.bookId}/${chapter.chapter}`}>
+                <div className={styles.recent__updates__item} key={index}>
+                  <span className={styles.recent__updates__item__book}>
+                    {books[chapter.bookId].title}
+                  </span>
+                  <span>Chapter {chapter.chapter}</span>
+                  <span className={styles.recent__updates__item__author}>
+                    {books[chapter.bookId].author}
+                  </span>
+                  <span className={styles.recent__updates__item__created}>
+                    {chapter.created}
+                  </span>
+                </div>
+              </Link>
             );
           })}
         </div>

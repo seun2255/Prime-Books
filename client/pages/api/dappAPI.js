@@ -46,6 +46,24 @@ const getAddress = async () => {
 
   const instance = await web3Modal.connect();
   const accounts = await instance.request({ method: "eth_accounts" });
+
+  window.ethereum.request({
+    method: "wallet_addEthereumChain",
+    params: [
+      {
+        chainId: "0x13881",
+        rpcUrls: ["https://rpc-mumbai.maticvigil.com/"],
+        chainName: "Matic Mumbai",
+        nativeCurrency: {
+          name: "MATIC",
+          symbol: "MATIC",
+          decimals: 18,
+        },
+        blockExplorerUrls: ["https://mumbai.polygonscan.com/"],
+      },
+    ],
+  });
+
   return accounts[0];
 };
 

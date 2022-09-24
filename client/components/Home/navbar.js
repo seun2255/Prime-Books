@@ -110,7 +110,6 @@ const NavBar = () => {
   }, [connectedState]);
 
   useEffect(() => {
-    console.log(isConnected);
     if (isConnected) {
       connect().then((userData) => {
         if (userData) {
