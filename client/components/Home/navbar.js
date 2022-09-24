@@ -61,6 +61,7 @@ const NavBar = () => {
     });
 
     connect().then((userData) => {
+      setWalletModal(false);
       if (userData) {
         dispatch({
           type: "LOGGED_IN_USER",
@@ -71,7 +72,6 @@ const NavBar = () => {
       }
       console.log(userData);
       console.log("hello");
-      setWalletModal(false);
     });
     /**
      * instead of using signIn(..., redirect: "/user")
