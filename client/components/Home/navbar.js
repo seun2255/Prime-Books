@@ -14,7 +14,6 @@ import { Context } from "../../context";
 import SuccesModal from "../../modals/succesModal";
 import WalletConnectModal from "../../modals/walletConnectModal";
 import { MetaMaskConnector } from "wagmi/connectors/metaMask";
-import { signIn, getSession } from "next-auth/react";
 import { useAccount, useConnect, useSignMessage, useDisconnect } from "wagmi";
 import { useRouter } from "next/router";
 import axios from "axios";
@@ -54,11 +53,6 @@ const NavBar = () => {
     });
 
     const userData = { address: account, chain: chain.id, network: "evm" };
-
-    const { url } = await signIn("credentials", {
-      redirect: false,
-      callbackUrl: "/user",
-    });
 
     connect().then((userData) => {
       setWalletModal(false);

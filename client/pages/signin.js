@@ -1,5 +1,4 @@
 import { MetaMaskConnector } from "wagmi/connectors/metaMask";
-import { signIn } from "next-auth/react";
 import { useAccount, useConnect, useSignMessage, useDisconnect } from "wagmi";
 import { useRouter } from "next/router";
 import axios from "axios";
@@ -33,11 +32,11 @@ function SignIn() {
     // const signature = await signMessageAsync({ message });
 
     // redirect user after success authentication to '/user' page
-    const { url } = await signIn("credentials", {
-      ...userData,
-      redirect: false,
-      callbackUrl: "/user",
-    });
+    // const { url } = await signIn("credentials", {
+    //   ...userData,
+    //   redirect: false,
+    //   callbackUrl: "/user",
+    // });
     /**
      * instead of using signIn(..., redirect: "/user")
      * we get the url from callback and push it to the router to avoid page refreshing
