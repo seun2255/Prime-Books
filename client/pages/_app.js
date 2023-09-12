@@ -24,12 +24,10 @@ const client = createClient({
 function MyApp({ Component, pageProps }) {
   return (
     <WagmiConfig client={client}>
-      <SessionProvider session={pageProps.session} refetchInterval={0}>
-        <Provider>
-          <NavBar />
-          <Component {...pageProps} />
-        </Provider>
-      </SessionProvider>
+      <Provider>
+        <NavBar />
+        <Component {...pageProps} />
+      </Provider>
     </WagmiConfig>
   );
 }
