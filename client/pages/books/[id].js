@@ -129,7 +129,7 @@ function Books({ book, latestChapter }) {
               <div className={styles.chapter__list}>
                 {book.chapters.map((chapter, index) => {
                   return (
-                    <div className={styles.chapter}>
+                    <div className={styles.chapter} key={index}>
                       <span>{index}</span>
                       <div className={styles.chapter__details}>
                         <span className={styles.chapter__name}>

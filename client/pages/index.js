@@ -106,8 +106,11 @@ export default function Home({ books, recentChapters }) {
           </h3>
           {recentChapters.map((chapter, index) => {
             return (
-              <Link href={`/books/${chapter.bookId}/${chapter.chapter}`}>
-                <div className={styles.recent__updates__item} key={index}>
+              <Link
+                href={`/books/${chapter.bookId}/${chapter.chapter}`}
+                key={index}
+              >
+                <div className={styles.recent__updates__item}>
                   <span className={styles.recent__updates__item__book}>
                     {books[chapter.bookId].title}
                   </span>

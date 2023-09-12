@@ -18,26 +18,26 @@ export default NextAuth({
           placeholder: "0x0",
         },
       },
-      async authorize(credentials) {
-        try {
-          // "message" and "signature" are needed for authorization
-          // we described them in "credentials" above
-          const { message, signature } = credentials;
+      // async authorize(credentials) {
+      //   try {
+      //     // "message" and "signature" are needed for authorization
+      //     // we described them in "credentials" above
+      //     const { message, signature } = credentials;
 
-          await Moralis.start({ apiKey: process.env.MORALIS_API_KEY });
+      //     await Moralis.start({ apiKey: process.env.MORALIS_API_KEY });
 
-          const { address, profileId } = (
-            await Moralis.Auth.verify({ message, signature, network: "evm" })
-          ).raw;
+      //     const { address, profileId } = (
+      //       await Moralis.Auth.verify({ message, signature, network: "evm" })
+      //     ).raw;
 
-          const user = { address, profileId, signature };
-          // returning the user object and creating  a session
-          return user;
-        } catch (e) {
-          console.error(e);
-          return null;
-        }
-      },
+      //     const user = { address, profileId, signature };
+      //     // returning the user object and creating  a session
+      //     return user;
+      //   } catch (e) {
+      //     console.error(e);
+      //     return null;
+      //   }
+      // },
     }),
   ],
   // adding user info to the user session object
